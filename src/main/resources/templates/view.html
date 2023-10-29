@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Translator</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.js"></script>
+
+</head>
+<body style="background-color: #222; color: black;">
+
+<div class="container mt-5">
+  <h1 class="text-white">Code Translator - Created by Jinsol</h1>
+  <form id="translateForm">
+    <div class="form-group">
+      <label for="language" class="text-white">Select your language:</label>
+      <select class="form-control" id="language" name="language">
+        <option value="">auto</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+                <option value="ruby">Ruby</option>
+                <option value="php">PHP</option>
+                <option value="swift">Swift</option>
+                <option value="go">Go</option>
+                <option value="rust">Rust</option>
+                <option value="c">C</option>
+                <option value="cpp">C++</option>
+                <option value="csharp">C#</option>
+
+      </select>
+      <label for="code" class="text-white">Enter your code:</label>
+      <textarea class="form-control" id="code" name="code" rows="10" cols="50"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="language" class="text-white">Select target language:</label>
+      <select class="form-control" id="targetLanguage" name="language">
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="ruby">Ruby</option>
+        <option value="php">PHP</option>
+        <option value="swift">Swift</option>
+        <option value="go">Go</option>
+        <option value="rust">Rust</option>
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="csharp">C#</option>
+
+      </select>
+    </div>
+    <button type="button" class="btn btn-primary" id="translateButton">Translate</button>
+  </form>
+
+  <h2 class="mt-4 text-white">Translated Code:</h2>
+  <!-- 코드 블록에 클래스 동적 추가 -->
+  <pre id="translationResult" class="bg-dark p-3">
+    <code id="translatedCode" class=""></code>
+  </pre>
+</div>
+
+<script th:inline="javascript" src="/js/view.js"></script>
+</body>
+</html>
