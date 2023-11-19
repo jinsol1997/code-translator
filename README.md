@@ -19,13 +19,13 @@
   - C++
   - C#
  
-- 사용자 정의 언어 추가 가능
+- Exception 발생 시 db에 해당 내용 저장
 - 코드 강조 표시 및 복사
 
 ## 사용한 기술스택
 
 - Frontend: HTML, CSS, JavaScript
-- Backend: Java Spring Boot
+- Backend: Java Spring Boot, Jpa, Mysql
 
 - ## 사용 방법
 
